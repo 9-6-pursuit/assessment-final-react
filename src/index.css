@@ -1,4 +1,4 @@
-nav {
+.nav {
   display: flex;
   justify-content: space-around;
   background: #517e94;
@@ -7,17 +7,17 @@ nav {
   font-family: sans-serif;
 }
 
-nav a {
+.nav a {
   text-decoration: none;
   font-size: 2em;
   color: white;
 }
 
-nav img {
+.nav img {
   height: 50px;
 }
 
-main {
+.main {
   margin-top: 1em;
   text-align: center;
 }
@@ -93,6 +93,7 @@ li {
   width: 80%;
   min-height: 50%;
   margin: auto;
+  
 }
 
 .people aside h3 {
@@ -115,6 +116,7 @@ li {
   width: 90%;
   margin: auto;
   padding: 1em;
+  margin-top: 1em;
 }
 
 ul li::marker {
