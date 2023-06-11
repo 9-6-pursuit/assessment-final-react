@@ -1,0 +1,36 @@
+
+  
+.locations h1 {
+  margin-bottom: 20px;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.locations button, .locations h2 {
+  margin-bottom: 20px;
+}
+
+.locations li ul {
+  list-style-type: none; /* This removes the bullet points from the list */
+  padding-left: 0; /* This aligns the list items with the parent list */
+}
+
+.locations li ul li {
+  margin-top: 5px; /* This adds a space between each list item in the nested list */
+  font-size: 0.9em; /* This makes the text slightly smaller than the parent list items */
+  color: #666; /* This changes the text color */
+}
+
+.location-box {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px; /* This is the new line */
+  width: 50%;
+}
+
