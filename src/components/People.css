@@ -1,0 +1,40 @@
+.people {
+  width: 1200px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.people h2 {
+  width: 100%;
+  font-size: 50px;
+}
+
+.people form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.people form input[type="text"] {
+  width: 300px;
+  height: 35px;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.people form button {
+  height: 48px;
+  margin-left: 10px;
+  padding: 0 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+aside p {
+  margin-top: 20px;
+}
