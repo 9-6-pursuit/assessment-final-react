@@ -49,9 +49,13 @@ export default function Locations() {
       <button onClick={toggleLocations}>
         {showLocations ? "Hide Locations" : "Show Locations"}
       </button>
-      <button onClick={sortByName}>Sort by Name</button>
-      <button onClick={sortByClimate}>Sort by Climate</button>
-      <button onClick={sortByTerrain}>Sort by Terrain</button>
+      {showLocations && (
+        <>
+          <button onClick={sortByName}>Sort by Name</button>
+          <button onClick={sortByClimate}>Sort by Climate</button>
+          <button onClick={sortByTerrain}>Sort by Terrain</button>
+        </>
+      )}
       {showLocations && (
         <ul className="location-list">
           {locations.sort(sortLocations).map((location) => (
@@ -68,3 +72,4 @@ export default function Locations() {
     </div>
   );
 }
+
