@@ -1,0 +1,14 @@
+#logo {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 20px;
+  }
+
+.logo {
+background-color: yellow;
+height: 50px;
+width: 50px;
+position: absolute;
+left: 20px;
+}

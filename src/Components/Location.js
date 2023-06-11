@@ -9,11 +9,17 @@ function Location() {
 
     const listLocations = location.map((location, index) => {  //index is needed for warning and for a key
       return(
+        <>
+        <hr />
           <div key={ index }>
-              <h2> { location.name }</h2>
-              <p>{ location.climate }</p>
-              <p>{ location.terrain }</p>
+            <ul>
+              <li> Name: { location.name }</li>
+              <li> Climate: { location.climate }</li>
+              <li> Terrain: { location.terrain }</li>
+            </ul>
+              <hr/>
           </div>
+        </>
       );  
       });
 
@@ -72,7 +78,7 @@ function handleSortByTerrain() {
         </>
       )}
 
-{clicked && <div className='information'>{listLocations}</div>}
+{clicked && <div className='information'><ul>{listLocations}</ul></div>}
     </div>
   );
 }
