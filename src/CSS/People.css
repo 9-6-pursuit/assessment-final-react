@@ -1,0 +1,26 @@
+.people h1 {
+    margin: auto;
+    margin-bottom: 40px;
+    width: 90%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+aside {
+    text-align: center;
+    padding-top: 30px;
+}
+
+aside span {
+    color: rgb(137, 29, 141);
+}
+
+aside h3 {
+    color: rgb(235, 13, 172);
+}

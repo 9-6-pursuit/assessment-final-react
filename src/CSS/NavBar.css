@@ -1,0 +1,28 @@
+.Navbar {
+    background-color: rgb(165, 165, 231);
+    display: flex;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 6px;
+}
+
+.Navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.pages ul {
+    list-style: none;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-evenly;
+}
+
+.pages ul li {
+    margin-left: 100px;
+}
