@@ -46,7 +46,7 @@ export default function People() {
       {searchAttempted && !foundPerson && <p>Not Found</p>}
 
       {foundPerson && (
-        <div>
+        <div className='found-person'>
           <h3>Name: {foundPerson.name}</h3>
           <p>Age: {foundPerson.age}</p>
           <p>Gender: {foundPerson.gender}</p>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Movies.css'
 
 export default function Movies() {
   const [films, setFilms] = useState([]);
@@ -27,7 +28,7 @@ export default function Movies() {
   return (
     <div className="movies">
       <h2>Select a Movie</h2>
-      <select value={selectedFilm} onChange={handleFilmChange}>
+      <select className='select-movie' value={selectedFilm} onChange={handleFilmChange}>
         <option value="">- Select -</option>
         {films.map(film => (
           <option key={film.id} value={film.id}>{film.title}</option>
