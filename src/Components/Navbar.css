@@ -1,7 +1,7 @@
 /* Navbar.css */
 
 nav {
-    background-color: #f2f2f2;
+    background-color: #2eb9ec;
     padding: 10px;
   }
   
@@ -38,6 +38,6 @@ nav {
   }
   
   .nav-links a:hover {
-    background-color: #2cabd9;
+    background-color: #dddbdb;
   }
   
