@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 export default function Movies () {
 
     const [movies, setMovies] = useState([])
-    const [title, setTitle] = useState() 
-    const [date, setDate] = useState()
-    const [description, setDescription] = useState("")
+    const [option, setOption] = useState({}) 
+    //simplified this section after review. previous states were unnecessary.
     
     
     useEffect(() => {
@@ -19,24 +18,45 @@ export default function Movies () {
         
     }, [])
     
+    function handleOnChange(event) {
+        const id = event.target.value
+        const movie = movies.find(movie => movie.title === id) || {};
+        setOption(movie);
+        console.log(movie)
+    }
+
     return ( 
         <>
-        <h1> Select a Movie </h1> 
+        <div className="movies">   
         <div className="movie-box">
-            <select onChange={(e)=>setTitle(e.target.value)} 
+        <h1> Select a Movie </h1> 
+            <select onChange={handleOnChange} 
              className="movie-select" id="movie-select">
-                <option value="empty-option"> </option>
+                <option> </option>
                 {
-                    movies.map((opts,i)=><option>{opts.title}</option>)
+                    movies.map((opts,i)=><option key={i}>{opts.title}</option>)
                 }
             </select>
-                <div className="description-box">
-                    <h1>{title}</h1>
-                    <h3> </h3>
+                
+                    {option.id ? (
+                        <aside>
+                            <h7>
+                                <span> Title: </span>
+                                {option.title}
+                            </h7>
+                            <p>
+                                <span> <strong> Release Date:  </strong></span>
+                                {option.release_date}
+                            </p>
+                            <p>
+                                <span> <strong> Description: </strong></span>
+                                {option.description}
+                            </p>
+                        </aside>
+                    ) : null }
 
                 </div>
-                
-        </div>
+                </div>
         </>
     )
 }
