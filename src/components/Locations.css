@@ -1,0 +1,16 @@
+
+.location-list{
+    width: 700px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul{
+    /* display: flex;
+    flex-direction: column; */
+}
+li{
+    /* background-color: white;
+    display: flex;
+    flex-direction: column; */
+    list-style: none;
+}

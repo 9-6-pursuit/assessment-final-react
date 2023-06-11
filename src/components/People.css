@@ -1,0 +1,21 @@
+.movies{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.result{
+    padding: 20px;
+    background-color: rgb(189, 189, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+}
+.search-bar{
+    /* display: flex;
+    flex-direction: row; */
+    /* align-items: center;
+    justify-content: center; */
+}
