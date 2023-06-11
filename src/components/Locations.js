@@ -23,13 +23,19 @@ function Locations() {
         setButtonText(text);
     }
 
+    const sortLocations = (key) => {
+        // console.log(key)
+        let sorted = [...locations].sort((a, b) => a[key] > b[key] ? 1 : -1);
+        setLocations(sorted)
+    }
+
     return (
         <div className="locations">
             <h2>List of Locations</h2>
             <button onClick={toggleShow} >{buttonText}</button>
-            <button>Sort by Name</button>
-            <button>Sort by Climate</button>
-            <button>Sort by Terrain</button>
+            <button onClick={() => sortLocations("name")}>Sort by Name</button>
+            <button onClick={() => sortLocations("climate")}>Sort by Climate</button>
+            <button onClick={() => sortLocations("terrain")}>Sort by Terrain</button>
             {show &&
                 <ul>
                     {locations.map(location =>

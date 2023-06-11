@@ -20,6 +20,7 @@ function Movies() {
     return (
         <div className="movies">
             <h2>Select a Movie</h2>
+            <aside>
             <select onChange={handleChange}>
                 <option></option>
                 {movies.map(episode => 
@@ -33,6 +34,7 @@ function Movies() {
                     <p><span>Release Date:</span> {selected.description}</p>
                 </aside>
             }
+            </aside>
         </div>
     );
 }
