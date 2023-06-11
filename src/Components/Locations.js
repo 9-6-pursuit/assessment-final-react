@@ -23,7 +23,7 @@ function Locations() {
         }
     }
     function sortClimate(){
-        setLocations(locations.sort((a, b) => {
+        let sorted = [...locations].sort((a, b) => {
             let fa = a.climate.toLowerCase(),
             fb = b.climate.toLowerCase();
     
@@ -34,11 +34,12 @@ function Locations() {
             return 1;
         }
         return 0;
-        }))
+        })
+        setLocations(sorted)
         console.log(locations)
     }
     function sortTerrain(){
-        setLocations(locations.sort((a, b) => {
+        let sorted = [...locations].sort((a, b) => {
             let fa = a.terrain.toLowerCase(),
             fb = b.terrain.toLowerCase();
     
@@ -49,13 +50,14 @@ function Locations() {
             return 1;
         }
         return 0;
-        }))
+        })
+        setLocations(sorted)
         console.log(locations)
     }
     return (
         <div className="locations text-center">
             <h1>List of Locations</h1>
-            <button onClick={handleLocations} type="submit" className="btn btn-primary btn-lg search">{shown ? "Show Locations" : "Hide Locations"}</button>
+            <button onClick={handleLocations} type="submit" className="btn btn-primary btn-lg search">{shown ? "Hide Locations" : "Show Locations"}</button>
             {shown ? <button onClick={sortClimate} type="submit" className="btn btn-primary btn-lg search"> Sort by Climate</button> : null}
             {shown ? <button onClick={sortTerrain} type="submit" className="btn btn-primary btn-lg search"> Sort by Terrain</button> : null}
             <div className="container">
@@ -71,7 +73,6 @@ function Locations() {
                     }) : null}
                 </div>
             </div>
-
         </div>
   )
   }
