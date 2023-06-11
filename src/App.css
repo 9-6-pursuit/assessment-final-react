@@ -1,0 +1,11 @@
+footer {
+    position: fixed; /* stickey*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+   background-color: #b8d8d1; 
+    color: white;
+    text-align: center;
+    font-size: small;
+    font-family: monospace;
+  }

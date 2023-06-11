@@ -1,0 +1,18 @@
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .buttonContainer button {
+    margin: 10px 0;
+  }
+
+  
+  .locations h2 {
+    width: 100%;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
