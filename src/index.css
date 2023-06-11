@@ -5,6 +5,7 @@ nav {
   padding: 1em;
   margin-bottom: 2em;
   font-family: sans-serif;
+  align-items: center;
 }
 
 nav a {
@@ -20,6 +21,14 @@ nav img {
 main {
   margin-top: 1em;
   text-align: center;
+}
+
+select{
+  min-width: 200px;
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  margin: 15px;
 }
 
 section,
@@ -41,25 +50,25 @@ li {
   min-height: 80vh;
 }
 
-.locations > ul {
+.locations>ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-left: 0;
 }
 
-.locations ul > li {
+.locations ul>li {
   background: lemonchiffon;
   width: 26%;
   padding: 2em;
 }
 
-.locations ul > li > ul {
+.locations ul>li>ul {
   margin-left: 0;
   list-style: none;
 }
 
-.locations ul > li > ul li {
+.locations ul>li>ul li {
   background: ghostwhite;
   display: flex;
   flex-wrap: no-wrap;
@@ -67,11 +76,12 @@ li {
   justify-content: center;
 }
 
-.locations ul > li > ul li span {
+.locations ul>li>ul li span {
   text-align: center;
   display: inline-block;
   width: 100%;
 }
+
 .details li {
   list-style: none;
   margin: 0.5em 0;
@@ -82,10 +92,18 @@ li {
   font-weight: bold;
 }
 
+form{
+  margin: 10px;
+}
+
 .people {
   background: lemonchiffon;
   height: 80vh;
   padding-top: 1em;
+}
+
+.people input,.people button{
+  padding: 7px;
 }
 
 .people aside {
@@ -93,6 +111,10 @@ li {
   width: 80%;
   min-height: 50%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .people aside h3 {
@@ -121,4 +143,10 @@ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+body,
+html {
+  margin: 0px;
+  padding: 0px;
 }
