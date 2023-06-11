@@ -75,8 +75,8 @@ function Locations() {
         <ul>
           {allLocations.map((location) => (
             <li key={location.id}>
-              <h3>{location.name}</h3>
               <ul>
+                <li>Name: {location.name}</li>
                 <li>Climate: {location.climate}</li>
                 <li>Terrain: {location.terrain}</li>
               </ul>
