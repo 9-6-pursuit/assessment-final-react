@@ -1,0 +1,19 @@
+.nav-bar {
+    align-items: center;
+    background-color: #bbb;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 50px;
+}
+
+.nav-item {
+    cursor: pointer;
+    padding: 50px;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: #ccc;
+}
