@@ -32,7 +32,7 @@ export default function Movies() {
                 id="movie-select"
                 onChange={(e) => getSelectedMovieId(e)}
             >
-                <option value=""></option>
+                <option value="" className="movies-selection"></option>
                 {movies.map((movie) => {
                     return (
                         <option key={movie.id} value={movie.id}>
