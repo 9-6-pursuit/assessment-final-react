@@ -1,0 +1,13 @@
+.buttons-row {
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .sort-buttons-container {
+    display: flex;
+  }
+  
+  .locations {
+    text-align: center;
+  }
