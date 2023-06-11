@@ -29,8 +29,9 @@ export default function Movies() {
     return (
     <>
         <div className="movies">
-            <h1>Movies</h1>
+            <h1>Select a Movie</h1>
             <select onChange={handleOnChange}>
+                <option></option>
                 {movies.map((movie) => {
                     return(
                         <option key={movie.id}>{movie.title}</option>
