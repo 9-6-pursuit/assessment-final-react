@@ -37,8 +37,8 @@ function People() {
             </form>
             {
                 people.map((people) => {
-                    // let listedPerson = people.name.toLowerCase();
-                    if(inputName.toLowerCase() == people.name.toLowerCase()) {
+                     let listedPerson = people.name.toLowerCase();
+                    if(inputName == listedPerson) {
                         return (
                             <div>
                                 <h2>Name: {people.name}</h2>
