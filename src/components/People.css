@@ -1,0 +1,17 @@
+
+.people {
+    background-color: rgb(252, 252, 195);
+}
+
+.search{
+    padding: 5px;
+   
+}
+.person{
+    justify-content: center;
+    display: flex;
+}
+.search_bar{
+    justify-content: center;
+    display: flex;
+}
