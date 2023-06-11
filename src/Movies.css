@@ -1,0 +1,24 @@
+.movies{
+    text-align: center;
+    width: 90%;
+    margin:auto;
+}
+
+.title{
+    color: black;
+    font-weight: 400;
+}
+
+.desc{
+    background-color: aliceblue;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+.selection{
+    margin-bottom: 20px;
+}
+
+.select-a-movie{
+    font-size: xx-large;
+}
