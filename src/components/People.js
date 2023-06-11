@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './People.css'
 
 export default function People() {
   const [people, setPeople] = useState([]);
@@ -32,14 +33,14 @@ export default function People() {
   return (
     <div className="people">
       <h2>Search for a Person</h2>
-      <form onSubmit={handleSearchSubmit}>
+      <form className='search-bar' onSubmit={handleSearchSubmit}>
         <input
           type="text"
           placeholder="Enter a name"
           value={searchTerm}
           onChange={handleSearchChange}
         />
-        <button type="submit">Search</button>
+        <button className="search-button" type="submit">Search</button>
       </form>
 
       {searchAttempted && !foundPerson && <p>Not Found</p>}
