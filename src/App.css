@@ -1,0 +1,26 @@
+.home-page-text{
+    text-align: center;
+}
+
+.movies {
+    text-align: center;
+}
+
+.people {
+    text-align: center;
+}
+
+.locations {
+    text-align: center;
+}
+
+.location-list {
+  list-style-type: none;
+  text-align: center;
+}
+
+.list {
+    list-style-type: none;
+    text-align: center;
+}
+
