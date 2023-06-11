@@ -5,10 +5,10 @@ import "./NavBar.css";
 function NavBar() {
     return (
       <div className="nav">
-        <img src="" alt="logo" />
-        <Link className='nav-p' to='/movies'><p>Movies</p></Link>
-        <Link className='nav-p' to='/peoples'><p>People</p></Link>
-        <Link className='nav-p' to='locations'><p>Locations</p></Link>
+       <Link to='/'><img src="" alt="logo" /></Link> 
+        <Link to='/movies'><p>Movies</p></Link>
+        <Link to='/peoples'><p>People</p></Link>
+        <Link to='locations'><p>Locations</p></Link>
       </div>
     );
   }

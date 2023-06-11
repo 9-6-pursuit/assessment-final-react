@@ -1,8 +1,8 @@
 function Home() {
     return (
-      <div >
-        <h1>Wellcome to GhibliApp</h1>
-      </div>
+      <section >
+        <h2>Wellcome to GhibliApp</h2>
+      </section>
     );
   }
   
