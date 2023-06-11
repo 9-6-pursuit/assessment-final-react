@@ -1,0 +1,19 @@
+.people{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+.desc{
+    width: 78%;
+    padding: 40px;
+}
+
+
+.upper-box{
+    margin-bottom: 20px;
+}
+
+.personName{
+    color: black;
+    font-weight: 100;
+}

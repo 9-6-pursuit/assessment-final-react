@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(55, 87, 153);
+    padding: 20px;
+}
+
+.img-icon{
+    width: 50px;
+    height: 50px;
+}
+
+h2{
+    text-decoration: none;
+    color: rgb(35, 35, 172);
+    font-size: 2rem;
+}
+

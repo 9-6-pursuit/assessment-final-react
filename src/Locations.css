@@ -1,0 +1,15 @@
+.locations{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+li{
+    list-style: none;
+}
+
+.locationList{
+    display: flex;
+
+    flex-wrap: wrap;
+}
