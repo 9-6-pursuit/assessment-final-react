@@ -29,6 +29,9 @@ function Locations() {
   let handleSortByClimate = () => {
     setSortOption("climate");
   };
+  let handleSortByTerrain = () => {
+    setSortOption("terrain")
+  }
 
   useEffect(() => {
     if (sortOption) {
@@ -49,36 +52,37 @@ function Locations() {
     <div className="locations">
       <h1>List of Locations</h1>
 
-      <button type="button" onClick={handleToggleLocations}>
-        {showLocations ? "HIDE LOCATIONS" : "SHOW LOCATIONS"}
-      </button>
-
-      {showLocations && (
-        <div>
-          <div className="buttons-container">
+      <div className="buttons-row">
+        <button type="button" onClick={handleToggleLocations}>
+          {showLocations ? "HIDE LOCATIONS" : "SHOW LOCATIONS"}
+        </button>
+        {showLocations && (
+          <div className="sort-buttons-container">
             <button type="button" onClick={handleSortByName}>
               SORT BY NAME
             </button>
             <button type="button" onClick={handleSortByClimate}>
               SORT BY CLIMATE
             </button>
-            <button type="button" onClick={handleSortByClimate}>
+            <button type="button" onClick={handleSortByTerrain}>
               SORT BY TERRAIN
             </button>
           </div>
+        )}
+      </div>
 
-          <ul>
-            {allLocations.map((location) => (
-              <li key={location.id}>
-                <h3>{location.name}</h3>
-                <ul>
-                  <li>Climate: {location.climate}</li>
-                  <li>Terrain: {location.terrain}</li>
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </div>
+      {showLocations && (
+        <ul>
+          {allLocations.map((location) => (
+            <li key={location.id}>
+              <h3>{location.name}</h3>
+              <ul>
+                <li>Climate: {location.climate}</li>
+                <li>Terrain: {location.terrain}</li>
+              </ul>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );

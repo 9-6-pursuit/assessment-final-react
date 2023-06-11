@@ -1,5 +1,13 @@
-.buttons-container {
+.buttons-row {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+
   }
   
+  .sort-buttons-container {
+    display: flex;
+  }
+  
+  .locations {
+    text-align: center;
+  }
