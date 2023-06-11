@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  padding: 10px 0 10px 0;
+}
+
+.menu-list {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-list li {
+  padding: 10px;
+}
+
+.menu-list li a {
+  padding: 10px;
+}
+
+.menu-list li a:hover {
+  color: #10557e;
+}
+
+

@@ -1,0 +1,21 @@
+.locations {
+  width: 1200px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.locations h2 {
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttonContainer button {
+  margin: 10px 0;
+}
