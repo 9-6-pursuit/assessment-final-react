@@ -2,7 +2,9 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>You have arrived home. </div>
+    <div>
+          <h1>Welcome to GhibliApp</h1>
+           </div>
   )
 }
 

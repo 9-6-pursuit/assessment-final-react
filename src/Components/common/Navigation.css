@@ -1,7 +1,7 @@
 #logo {
     height: 50px;
     width: 50px;
-    position: absolute;
+
     left: 20px;
   }
 
@@ -9,6 +9,25 @@
 background-color: yellow;
 height: 50px;
 width: 50px;
-position: absolute;
+
 left: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: #517e94;
+  padding: 1em;
+  margin-bottom: 2em;
+  font-family: sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+}
+
+nav img {
+  height: 50px;
 }

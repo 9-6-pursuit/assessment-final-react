@@ -5,6 +5,7 @@ function Location() {
     const [location, setLocations] = useState([])
     const [clicked, setClicked]=useState(false);
     const [selectedOption, setSelectedOption] = useState("");
+    
     const buttonText = clicked ? "Hide Locations" : "Show Locations";
 
     const listLocations = location.map((location, index) => {  //index is needed for warning and for a key
