@@ -1,0 +1,22 @@
+
+
+.climate {
+    padding: 10px;
+}
+
+.location {
+    border: 2px solid blue;
+    padding: 20px;
+}
+
+.name {
+    padding: 10px;
+}
+
+.terrain {
+     padding: 10px;
+}
+
+ul {
+    list-style: none;
+}
