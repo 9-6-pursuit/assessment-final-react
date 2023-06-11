@@ -16,7 +16,7 @@ function People() {
     getPeople()
     .then((res) => {
       console.log(res);
-      setAllPeople([...res]);
+      setAllPeople(res);
     })
   },[])
 

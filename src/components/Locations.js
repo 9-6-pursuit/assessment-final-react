@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import { getLocations } from './Fetch.js/Fetch';
+import Location from './Location';
 
 function Locations() {
 
@@ -12,7 +13,7 @@ function Locations() {
         getLocations()
         .then((res) => {
           console.log(res);
-          setAllLocations([...res])
+          setAllLocations(res)
         });
       }, []);
     
@@ -30,6 +31,7 @@ function Locations() {
     {locationsShown ? 
     <ul>
       {allLocations.map((location) => {
+        console.log (location)
         return <Location key={location.id} location={location}/>
       })}
 

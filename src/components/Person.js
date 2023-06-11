@@ -1,6 +1,10 @@
 import React from 'react'
+import { getPeople } from './Fetch.js/Fetch'
+import { useEffect } from 'react'
 
-function Person() {
+function Person({person}) {
+
+
   return (
     <div><aside>
     <h3><span>Name: </span>{person.name}</h3>

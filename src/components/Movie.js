@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Movie({movie}) {
+    
   return (
     <aside>
     <h2><span>Title:</span> {movie.title}</h2>

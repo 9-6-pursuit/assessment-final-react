@@ -14,7 +14,7 @@ function Movies() {
         getMovies()
         .then((res) => {
           console.log(res)
-          setAllMovies([...res])
+          setAllMovies(res)
         })
       }, []);
 
