@@ -1,0 +1,43 @@
+/* Navbar.css */
+
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .logo {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+  }
+  
+  .nav-links a:hover {
+    background-color: #ddd;
+  }
+  
