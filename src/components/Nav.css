@@ -1,8 +1,9 @@
-.nav-bar {
+.nav {
   display: flex;
     padding-top: 10px;
     padding-bottom: 0px;
     justify-content: space-around;
+    margin-bottom: 2em;
   }
   
   .logo-link {
@@ -21,7 +22,7 @@
   .nav-item {
     display: flex;
     justify-content: space-between;
-    
+
     color: #379abd;
   }
   

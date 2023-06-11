@@ -49,7 +49,7 @@ function People() {
         {isSubmitted && !inputTerm ? (
           <p>Not Found</p>
         ) : inputTerm ? (
-          <div>
+          <div className="aside">
             <h2>Name: {inputTerm.name}</h2>
             <p>
               <strong>Age:</strong> {inputTerm.age}

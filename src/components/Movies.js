@@ -41,7 +41,7 @@ function Movies() {
             })}
         </select>
         {selected ? (
-            <div>
+            <div className="aside">
                 <h3>Title: {selected.title}</h3>
                 <p><strong>Release Date:</strong> {selected.release_date}</p>
                 <p><strong>Description:</strong> {selected.description}</p>
