@@ -36,8 +36,8 @@ function People() {
   };
 
   return (
-    <div className="people">
-      <h1>Search for a Person</h1>
+    <section className="people">
+      <h2>Search for a Person</h2>
       <form onSubmit={handleOnSubmit}>
         <input
           type="text"
@@ -49,8 +49,8 @@ function People() {
         {isSubmitted && !inputTerm ? (
           <p>Not Found</p>
         ) : inputTerm ? (
-          <div className="aside">
-            <h2>Name: {inputTerm.name}</h2>
+          <aside>
+            <h3>Name: {inputTerm.name}</h3>
             <p>
               <strong>Age:</strong> {inputTerm.age}
             </p>
@@ -60,10 +60,10 @@ function People() {
             <p>
               <strong>Hair Color:</strong> {inputTerm.hair_color}
             </p>
-          </div>
+          </aside>
         ) : null}
       </form>
-    </div>
+    </section>
   );
 }
 

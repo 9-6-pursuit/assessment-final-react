@@ -30,8 +30,8 @@ function Movies() {
 
 
     return (
-      <div className="movies">
-            <h1>Select a Movie</h1>
+      <section className="movies">
+            <h2>Select a Movie</h2>
         <select onChange={handleOnChange}>
         <option value=""></option>
             {movies.map((movie) => {
@@ -41,14 +41,14 @@ function Movies() {
             })}
         </select>
         {selected ? (
-            <div className="aside">
-                <h3>Title: {selected.title}</h3>
+            <aside>
+                <h3><span>Title:</span>{selected.title}</h3>
                 <p><strong>Release Date:</strong> {selected.release_date}</p>
                 <p><strong>Description:</strong> {selected.description}</p>
-            </div>
+            </aside>
         ): null}
 
-      </div>
+      </section>
     );
   }
   

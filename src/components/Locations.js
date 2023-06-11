@@ -49,8 +49,8 @@ function Locations() {
   }, [sortOption]);
 
   return (
-    <div className="locations">
-      <h1>List of Locations</h1>
+    <section className="locations">
+      <h2>List of Locations</h2>
 
       <div className="buttons-row">
         <button type="button" onClick={handleToggleLocations}>
@@ -84,7 +84,7 @@ function Locations() {
           ))}
         </ul>
       )}
-    </div>
+    </section>
   );
 }
 
