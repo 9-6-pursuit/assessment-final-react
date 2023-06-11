@@ -1,0 +1,33 @@
+.people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .people form, .people h2 {
+    margin-bottom: 20px;
+  }
+  
+
+  .people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.people form, .people h2 {
+    margin-bottom: 20px;
+}
+
+.person-details-box {
+  padding: 10px;
+  margin-top: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
