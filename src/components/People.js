@@ -30,14 +30,17 @@ function People() {
         if (result.length > 0) {
             setSelectedPeoples(result[0])
           } else {
-            setSelectedPeoples("Not Found")
+            setSelectedPeoples(null)
           }
-      
+    }
+
+    let handleFormSubmit = (event) =>{
+        event.target.reset()
     }
   return (
-    <div>
+    <div className='people'>
         <h2>Search for a Person</h2>
-        <form>
+        <form onSubmit={handleFormSubmit}>
         <input type='text' id='search' onChange={handleTextChange} />
         <button type='submit' onClick={handleClick}>
           submit
@@ -49,7 +52,9 @@ function People() {
             <p><strong>Gender:</strong> {selectedPeoples.gender}</p>
             <p><strong>Hair color:</strong> {selectedPeoples.hair_color}</p>
           </div>
-        ): null}
+        ): (
+            <p>Not Found</p>
+        )}
         
       </form>
     </div>
