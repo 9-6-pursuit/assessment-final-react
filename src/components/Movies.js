@@ -30,7 +30,7 @@ function Movies() {
 
 
     return (
-      <div className="movie">
+      <div className="movies">
             <h1>Select a Movie</h1>
         <select onChange={handleOnChange}>
         <option value=""></option>
