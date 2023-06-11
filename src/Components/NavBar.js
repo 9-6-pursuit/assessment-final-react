@@ -17,7 +17,7 @@ export default function NavBar() {
                         <Link to="/people">People</Link>
                     </li>
                     <li>
-                        <Link to="/location">Location</Link>
+                        <Link to="/locations">Location</Link>
                     </li>
                 </ul>
             </aside>

@@ -5,6 +5,7 @@ import Header from "./Components/Header.js";
 import NavBar from "./Components/NavBar.js";
 import Movies from "./Components/Movies.js";
 import People from "./Components/People.js";
+import Locations from "./Components/Locations.js";
 
 function App() {
   const [selectedMovie, setSelectedMovie] = useState({});
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Header Header={Header} />}></Route>
         <Route path="/movies" element={<Movies Movies={Movies} setSelectedMovie={setSelectedMovie} selectedMovie={selectedMovie}/>}></Route>
         <Route path="/people" element={<People People={People}/>}></Route>
+        <Route path="/locations" element={<Locations Locations={Locations}/>}></Route>
       </Routes>
     </div>
   );

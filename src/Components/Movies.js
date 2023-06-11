@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../CSS/Movies.css"
 
 export default function Movies({setSelectedMovie, selectedMovie}) {
     const [movies, setMovies] = useState([]);
@@ -22,21 +23,23 @@ export default function Movies({setSelectedMovie, selectedMovie}) {
     //I used event.target to capture the selected movie in the dropbox then I used the find method to find selected movie as an object and return the whole object so I can use it to populate the movie description section on the page
 
     return (
-        <div className="films">
+        <div className="movies">
             <h1>Select A Movie</h1>
-            <select onChange={handleSelect}>
-                <option value=""></option>
-                {movies.map((movie) => (
-                    <option key={movie.id} value={movie.title}>{movie.title}
-                    </option>
-                ))}
-            </select>
+            <div className="select-container">
+                <select className="select" onChange={handleSelect}>
+                    <option value=""></option>
+                    {movies.map((movie) => (
+                        <option key={movie.id} value={movie.title}>{movie.title}
+                        </option>
+                    ))}
+                </select>
+            </div>
             {selectedMovie && (
-             <div className='movie-description'>
+             <aside>
                 <h2>Title: {selectedMovie.title}</h2>
                 <p><span>Release Date:  </span> {selectedMovie.release_date}</p>
                 <p><span>Description: </span> {selectedMovie.description}</p>
-             </div>
+             </aside>
             )}
         </div>
     )
