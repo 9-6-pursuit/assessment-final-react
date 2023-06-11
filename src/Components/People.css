@@ -1,0 +1,49 @@
+.people {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .people-heading {
+    margin-top: 0;
+  }
+  
+  .people-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .people-input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+  }
+  
+  .people-button {
+    padding: 10px 20px;
+    background-color: #075081;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .people-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .people-result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .people-result-heading {
+    margin-top: 0;
+  }
+  
+  .people-not-found {
+    color: #ff0000;
+  }
+  
