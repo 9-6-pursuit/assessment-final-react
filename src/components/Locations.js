@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 function Locations() {
     const [show, setShow] = useState(false);
     const [locations, setLocations] = useState([]);
-    const [buttonText, setButtonText] = useState('Show Locations');
 
     useEffect(() => {
         fetch(`https://resource-ghibli-api.onrender.com/locations/`)
@@ -14,8 +13,6 @@ function Locations() {
 
     const toggleShow = () => {
         setShow(!show);
-        let text = show ? 'Show Locations' : 'Hide Locations';
-        setButtonText(text);
     }
 
     const sortLocations = (key) => {
@@ -27,7 +24,7 @@ function Locations() {
         <div className="locations">
             <h2>List of Locations</h2>
             <div className="buttons">
-                <button className="btn" onClick={toggleShow} >{buttonText}</button>
+                <button className="btn" onClick={toggleShow} >{show ? "Hide Locations" : "Show Locations"}</button>
                 <button className={show ? "btn" : "hide-btn"} onClick={() => sortLocations("name")}>Sort by Name</button>
                 <button className={show ? "btn" : "hide-btn"} onClick={() => sortLocations("climate")}>Sort by Climate</button>
                 <button className={show ? "btn" : "hide-btn"} onClick={() => sortLocations("terrain")}>Sort by Terrain</button>

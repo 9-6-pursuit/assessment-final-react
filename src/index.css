@@ -1,10 +1,13 @@
+body {
+  font-family: sans-serif, Arial, Helvetica;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
   background: #517e94;
   padding: 1em;
   margin-bottom: 2em;
-  font-family: sans-serif;
 }
 
 nav a {
@@ -29,7 +32,6 @@ h2 {
   width: 90%;
   margin: auto;
   text-align: center;
-  font-family: sans-serif;
 }
 
 li {
