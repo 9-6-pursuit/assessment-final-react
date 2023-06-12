@@ -1,20 +1,24 @@
+body {
+  font-family: sans-serif, Arial, Helvetica;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
   background: #517e94;
   padding: 1em;
   margin-bottom: 2em;
-  font-family: sans-serif;
 }
 
 nav a {
   text-decoration: none;
   font-size: 2em;
-  color: white;
+  color: #ffffff;
 }
 
 nav img {
   height: 50px;
+  width: 50px;
 }
 
 main {
@@ -28,7 +32,6 @@ h2 {
   width: 90%;
   margin: auto;
   text-align: center;
-  font-family: sans-serif;
 }
 
 li {
@@ -36,7 +39,7 @@ li {
 }
 
 .locations {
-  background: ghostwhite;
+  background: #f8f8ff;
   padding: 1em;
   min-height: 80vh;
 }
@@ -45,13 +48,15 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  /* list-style: none; */
   margin-left: 0;
 }
 
 .locations ul > li {
-  background: lemonchiffon;
+  background: #fffacd;
+  margin: 0.5em;
+  padding: 1.5em;
   width: 26%;
-  padding: 2em;
 }
 
 .locations ul > li > ul {
@@ -60,10 +65,11 @@ li {
 }
 
 .locations ul > li > ul li {
-  background: ghostwhite;
+  background: #f8f8ff;
   display: flex;
   flex-wrap: no-wrap;
-  width: 90%;
+  margin: 0.5em;
+  width: 70%;
   justify-content: center;
 }
 
@@ -72,6 +78,7 @@ li {
   display: inline-block;
   width: 100%;
 }
+
 .details li {
   list-style: none;
   margin: 0.5em 0;
@@ -83,16 +90,19 @@ li {
 }
 
 .people {
-  background: lemonchiffon;
+  background: #fffacd;
   height: 80vh;
   padding-top: 1em;
 }
 
 .people aside {
-  background: ghostwhite;
+  background: #f8f8ff;
   width: 80%;
   min-height: 50%;
   margin: auto;
+  margin-top: 2em;
+  padding-top: 2em;
+  text-align: center;
 }
 
 .people aside h3 {
@@ -100,7 +110,8 @@ li {
 }
 
 .people span,
-.movies span {
+.movies span,
+.locations span {
   font-weight: bold;
 }
 
@@ -111,14 +122,52 @@ li {
 }
 
 .movies aside {
-  background: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0f8ff;
   width: 90%;
   margin: auto;
+  margin-top: 2em;
   padding: 1em;
+}
+
+p {
+  line-height: 1.5em;
+  text-align: center;
 }
 
 ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+.hide-btn {
+  display: none;
+}
+
+form,
+.movie-list,
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+select,
+input,
+button {
+  margin: 0 3px 0 3px;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+}
+
+#src-btn {
+  background: #fffacd;
+}
+
+.btn {
+  background: #f8f8ff;
 }
