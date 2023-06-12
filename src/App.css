@@ -2,11 +2,25 @@
     background-color: #003784;
     padding: 30px;
   }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-link {
+    margin-right: 1rem; /* Adjust the value to control the spacing */
+  }
+  
+  .nav-logo {
+    height: 30px; /* Adjust the height of the logo */
+    margin-right: 1rem; /* Adjust the value to control the spacing */
+  }
   
   .nav-links {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 ;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import FilmList from "./Components/FilmList"
 import CharacterList from './Components/CharacterList'
 import LocationList from './Components/LocationList'
+import logo from "./Components/Mac-Miller.jpg"; // Import your logo image
 import "./App.css";
 
 function Home() {
@@ -19,9 +20,9 @@ function App() {
       <nav className='navbar'>
         <ul className='nav-links'>
           <li>
-            <Link to="/" className='nav-link'>Home</Link>
-          </li>
-          <li>
+            <Link to="/" className='nav-link'>
+              <img src={logo} alt="Logo" className='nav-logo' />
+            </Link>
             <Link to="/films" className='nav-link'>Films</Link>
           </li>
           <li>
@@ -44,4 +45,5 @@ function App() {
 }
 
 export default App;
+
 

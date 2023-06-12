@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "./FilmList.css"
 
 const FilmList = () => {
   const [films, setFilms] = useState([]);
@@ -26,7 +27,7 @@ const FilmList = () => {
   };
 
   return (
-    <div className="movies">
+    <div className="film-list">
       <h1>Studio Ghibli Films</h1>
       <h2>Select a Movie</h2>
       <select value={selectedFilm} onChange={handleFilmChange}>

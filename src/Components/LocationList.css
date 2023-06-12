@@ -1,0 +1,42 @@
+.locations {
+    text-align: center;
+    background-color: forestgreen;
+    padding: 20px;
+  }
+  
+  .locations h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .locations button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .locations h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .locations ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .locations li {
+    margin-bottom: 20px;
+  }
+  
+  .locations h2 {
+    font-size: 18px;
+  }
+  
+  .locations p {
+    margin-bottom: 10px;
+  }

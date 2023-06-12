@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import "./LocationList.css";
 
 const LocationList = () => {
   const [locations, setLocations] = useState([]);
   const [showLocations, setShowLocations] = useState(false);
+  const [sortedBy, setSortedBy] = useState('');
 
   useEffect(() => {
     fetch('https://resource-ghibli-api-pursuit.onrender.com/locations')
@@ -15,15 +17,16 @@ const LocationList = () => {
     setShowLocations(!showLocations);
   };
 
-  const handleSortByNameAndClimate = () => {
-    const sortedLocations = [...locations].sort((a, b) => {
-      const nameComparison = a.name.localeCompare(b.name);
-      if (nameComparison === 0) {
-        return a.climate.localeCompare(b.climate);
-      }
-      return nameComparison;
-    });
+  const handleSortByName = () => {
+    const sortedLocations = [...locations].sort((a, b) => a.name.localeCompare(b.name));
     setLocations(sortedLocations);
+    setSortedBy('name');
+  };
+
+  const handleSortByClimate = () => {
+    const sortedLocations = [...locations].sort((a, b) => a.climate.localeCompare(b.climate));
+    setLocations(sortedLocations);
+    setSortedBy('climate');
   };
 
   return (
@@ -34,9 +37,14 @@ const LocationList = () => {
       </button>
       {showLocations && (
         <React.Fragment>
-          <button onClick={handleSortByNameAndClimate}>
-            Sort by Name and Climate
-          </button>
+          <div>
+            <button onClick={handleSortByName} disabled={sortedBy === 'name'}>
+              Sort by Name
+            </button>
+            <button onClick={handleSortByClimate} disabled={sortedBy === 'climate'}>
+              Sort by Climate
+            </button>
+          </div>
           <h2>List of Locations</h2>
           <ul>
             {locations.map((location) => (
@@ -55,3 +63,4 @@ const LocationList = () => {
 };
 
 export default LocationList;
+

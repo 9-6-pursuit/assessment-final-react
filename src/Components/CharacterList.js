@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "./CharacterList.css"
 
 const CharacterList = () => {
   const [characters, setCharacters] = useState([]);
