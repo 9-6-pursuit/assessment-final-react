@@ -46,14 +46,15 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  list-style: none;
+  /* list-style: none; */
   margin-left: 0;
 }
 
 .locations ul > li {
   background: #fffacd;
-  width: 30%;
+  margin: 0.5em;
   padding: 1.5em;
+  width: 26%;
 }
 
 .locations ul > li > ul {
@@ -65,7 +66,8 @@ li {
   background: #f8f8ff;
   display: flex;
   flex-wrap: no-wrap;
-  width: 90%;
+  margin: 0.5em;
+  width: 70%;
   justify-content: center;
 }
 
