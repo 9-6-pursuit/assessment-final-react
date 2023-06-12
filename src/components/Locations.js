@@ -8,23 +8,17 @@ function Locations() {
     useEffect(() => {
         fetch(`https://resource-ghibli-api.onrender.com/locations/`)
         .then(response => response.json())
-        .then(data => {
-            setLocations(data);
-            // console.log(data)
-            // console.log(locations)
-        })
+        .then(data => setLocations(data))
         .catch(error => console.error(error));
     }, []);
 
     const toggleShow = () => {
         setShow(!show);
         let text = show ? 'Show Locations' : 'Hide Locations';
-        // console.log(show);
         setButtonText(text);
     }
 
     const sortLocations = (key) => {
-        // console.log(key)
         let sorted = [...locations].sort((a, b) => a[key] > b[key] ? 1 : -1);
         setLocations(sorted)
     }
@@ -32,18 +26,20 @@ function Locations() {
     return (
         <div className="locations">
             <h2>List of Locations</h2>
-            <button onClick={toggleShow} >{buttonText}</button>
-            <button onClick={() => sortLocations("name")}>Sort by Name</button>
-            <button onClick={() => sortLocations("climate")}>Sort by Climate</button>
-            <button onClick={() => sortLocations("terrain")}>Sort by Terrain</button>
+            <div className="buttons">
+                <button className="btn" onClick={toggleShow} >{buttonText}</button>
+                <button className={show ? "btn" : "hide-btn"} onClick={() => sortLocations("name")}>Sort by Name</button>
+                <button className={show ? "btn" : "hide-btn"} onClick={() => sortLocations("climate")}>Sort by Climate</button>
+                <button className={show ? "btn" : "hide-btn"} onClick={() => sortLocations("terrain")}>Sort by Terrain</button>
+            </div>
             {show &&
                 <ul>
                     {locations.map(location =>
                         <li key={location.id}>
                             <ul>
-                                <li><span>Name:</span>{location.name}</li>
-                                <li><span>Climate:</span>{location.climate}</li>
-                                <li><span>Terrain:</span>{location.terrain}</li>
+                                <li><span>Name: </span>{location.name}</li>
+                                <li><span>Climate: </span>{location.climate}</li>
+                                <li><span>Terrain: </span>{location.terrain}</li>
                             </ul>
                         </li>
                     )}

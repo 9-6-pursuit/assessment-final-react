@@ -26,8 +26,6 @@ function People() {
         setPerson(findPerson);
         setShowPerson(true);
         setSearch("");
-        // console.log(findPerson)
-        // console.log(person)
     }
 
     return (
@@ -35,12 +33,13 @@ function People() {
             <h2>Search for a Person</h2>
             <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="text" value={search} required/>
-                <button>Submit</button>
+                <button id="src-btn">Submit</button>
             </form>
             {person && showPerson ?
                 <aside>
                     <h2><span>Name:</span> {person.name}</h2>
                     <p><span>Age:</span> {person.age}</p>
+                    <p><span>Gender:</span> {person.gender}</p>
                     <p><span>Eye Color:</span> {person.eye_color}</p>
                     <p><span>Hair Color:</span> {person.hair_color}</p>
                 </aside>

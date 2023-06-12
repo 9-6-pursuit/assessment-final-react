@@ -20,21 +20,21 @@ function Movies() {
     return (
         <div className="movies">
             <h2>Select a Movie</h2>
-            <aside>
-            <select onChange={handleChange}>
-                <option></option>
-                {movies.map(episode => 
-                    <option key={episode.id}>{episode.title}</option>
-                )}
-            </select>
+            <div className="movie-list">
+                <select onChange={handleChange}>
+                    <option></option>
+                    {movies.map(movie => 
+                        <option key={movie.id}>{movie.title}</option>
+                    )}
+                </select>
+            </div>
             {selected &&
                 <aside>
                     <h2><span>Title:</span> {selected.title}</h2>
                     <p><span>Release Date:</span> {selected.release_date}</p>
-                    <p><span>Release Date:</span> {selected.description}</p>
+                    <p><span>Description:</span> {selected.description}</p>
                 </aside>
             }
-            </aside>
         </div>
     );
 }
