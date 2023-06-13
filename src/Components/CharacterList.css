@@ -1,0 +1,51 @@
+.people {
+    text-align: center;
+    background-color: khaki;
+    padding: 20px;
+  }
+  
+  .people h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .people h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .people form {
+    margin-bottom: 20px;
+  }
+  
+  .people input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+  }
+  
+  .people button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .people ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .people li {
+    margin-bottom: 20px;
+  }
+  
+  .people h2 {
+    font-size: 18px;
+  }
+  
+  .people p {
+    margin-bottom: 10px;
+  }
