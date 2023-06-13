@@ -1,51 +1,28 @@
-import './App.css';
-import Home from "./components/Home"
-import Nav from "./components/Nav"
-import Locations from "./components/Locations"
-import People from "./components/People"
-import Movies from "./components/Movies"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home";
+import Locations from "./components/Locations";
+import Movies from "./components/Movies";
+import Nav from "./components/Nav";
+import People from "./components/People";
 
-import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-//   const[selected, setSelected] = useState(null)
-// console.log(selected)
 
-return (
-  <div className="App">
-    <Router>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/people" element={<People />}/>
-        <Route path="/movies" element={<Movies />}/>
-        <Route path="/locations" element={<Locations />}/>
-      </Routes>
-    </Router>
-  </div>
-);
+  return (
+    <div className="App">
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<Movies />}/>
+          <Route path="/people" element={<People />}/>
+          <Route path="/locations" element={<Locations />} />
+
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
-
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Router>
-//         <Nav />
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           {/* <Route path="/movies" element={<Movies />} /> */}
-//           <Route path="/people" element={<People />} />
-//           <Route path="/locations" element={<Locations />} />
-//         </Routes>
-//       </Router>
-//     </div>
-//   );
-// }
-
-// export default App;
-

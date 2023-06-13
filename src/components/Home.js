@@ -2,7 +2,7 @@ function Home() {
     return (
       <div className="home">
          {/* <div className="header-home"> */}
-        <h1>Welcome to GhibliApp</h1>
+        <h1>Welcome to Judy's GhibliApp</h1>
       </div>
     );
   }

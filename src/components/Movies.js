@@ -8,6 +8,7 @@
 //   export default Movies;
 
 import { useState, useEffect } from "react";
+import "./Movie.css";
 
 function Movies() {
 
@@ -38,7 +39,8 @@ function Movies() {
 
 
     return (
-      <div className="movies">
+      <div className="movies-container">
+      {/* <div className="movies"> */}
             <h1>Select a Movie</h1>
         <select onChange={handleOnChange}>
         <option value=""></option>
@@ -49,13 +51,12 @@ function Movies() {
             })}
         </select>
         {selected ? (
-            <div>
+            <div className="movie-details">
                 <h3>Title: {selected.title}</h3>
                 <p><strong>Release Date:</strong> {selected.release_date}</p>
                 <p><strong>Description:</strong> {selected.description}</p>
             </div>
         ): null}
-
       </div>
     );
   }

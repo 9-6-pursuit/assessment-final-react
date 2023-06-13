@@ -8,6 +8,7 @@
 //   export default People;
 
 import { useState, useEffect } from "react";
+import "./People.css";
 
 function People() {
   const [people, setPeople] = useState([]);
@@ -44,7 +45,7 @@ function People() {
   };
 
   return (
-    <div className="people">
+    <div className="people"div>
       <h1>Search for a Person</h1>
       <form onSubmit={handleOnSubmit}>
         <input
@@ -66,7 +67,7 @@ function People() {
               <strong>Gender:</strong> {inputTerm.gender}
             </p>
             {
-              
+
             }
           </div>
         ) : null}
