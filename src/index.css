@@ -9,12 +9,24 @@ nav {
 
 nav a {
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
 }
 
 nav img {
   height: 50px;
+}
+
+.home {
+  background: #e1e8ec;
+  height: 100vh;
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #517e94;
+  font-size: 1.em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -35,74 +47,30 @@ li {
   font-size: 1em;
 }
 
-.locations {
-  background: ghostwhite;
-  padding: 1em;
-  min-height: 80vh;
-}
-
-.locations > ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 0;
-}
-
-.locations ul > li {
-  background: lemonchiffon;
-  width: 26%;
-  padding: 2em;
-}
-
-.locations ul > li > ul {
-  margin-left: 0;
-  list-style: none;
-}
-
-.locations ul > li > ul li {
-  background: ghostwhite;
-  display: flex;
-  flex-wrap: no-wrap;
-  width: 90%;
-  justify-content: center;
-}
-
-.locations ul > li > ul li span {
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-}
-.details li {
-  list-style: none;
-  margin: 0.5em 0;
-  align-self: center;
-}
-
-.details li span:first-child {
-  font-weight: bold;
-}
-
 .people {
-  background: lemonchiffon;
-  height: 80vh;
-  padding-top: 1em;
+  background: rgb(255, 225, 205);
+  height: 2000vh;
+
+}
+
+.people h2 {
+ /* color: rgb(9, 98, 242); */
+ color: #517e94;
+ padding-top: 20px;
+ font-size: larger;
+
 }
 
 .people aside {
-  background: ghostwhite;
+  background: white;
   width: 80%;
   min-height: 50%;
   margin: auto;
 }
 
-.people aside h3 {
+/* .people aside h3 {
   padding-top: 1em;
-}
-
-.people span,
-.movies span {
-  font-weight: bold;
-}
+} */
 
 .movies {
   padding-top: 1em;
@@ -111,7 +79,7 @@ li {
 }
 
 .movies aside {
-  background: aliceblue;
+  background: white;
   width: 90%;
   margin: auto;
   padding: 1em;

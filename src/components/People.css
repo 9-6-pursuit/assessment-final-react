@@ -1,0 +1,25 @@
+.people {
+    background: #f8e5d0;
+    height: 200vh;
+    /* padding-top: 1em; */
+  }
+  
+  .people aside {
+    background: white;
+    width: 80%;
+    /* min-height: 50%; */
+    margin: auto;
+    margin-top: 2em;
+    padding-top: 1em;
+    text-align: center;
+  }
+
+  .people h3 {
+    padding-top: 20px;
+  }
+
+ /* .form submit{
+    background-color: rgb(214, 31, 31);
+    padding: 12px;
+    width: 26%;
+  } */
