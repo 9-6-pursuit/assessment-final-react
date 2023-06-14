@@ -27,18 +27,20 @@ function Movies(){
     }
     return(
         <div className='movies'>
-            <h3>The Movies</h3>
-            <select onChange={handleOnChange}>
-                {movies.map((movie)=>{
-                    return(
-                        <option key={movie.id}>{movie.title}</option>
-                    )
-                })}
-            </select>
+            <h1 class='center movies-header'>The Movies</h1>
+            <div id='dropdown'>
+                <select onChange={handleOnChange}>
+                    {movies.map((movie)=>{
+                        return(
+                            <option className='middle' key={movie.id}>{movie.title}</option>
+                            )
+                        })}
+                </select>
+            </div>
             {selected ? (
-                <div>
-                    <h3>Title: {selected.title}</h3>
-                    <p><strong>Release Date:</strong> {selected.release_date}</p>
+                <div className='movie-details'>
+                    <p class='center bigger'><strong>Title:</strong> {selected.title}</p>
+                    <p class='center'><strong>Release Date:</strong> {selected.release_date}</p>
                     <p><strong>Description:</strong> {selected.description} </p>
                 </div>
             ): null}

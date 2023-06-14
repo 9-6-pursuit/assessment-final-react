@@ -39,7 +39,7 @@ function People() {
     }
   return (
     <div className='people'>
-        <h2>Search for a Person</h2>
+        <h1 class='center'>Search for a Person</h1>
         <form onSubmit={handleFormSubmit}>
         <input type='text' id='search' onChange={handleTextChange} />
         <button type='submit' onClick={handleClick}>

@@ -111,7 +111,7 @@ li {
 }
 
 .movies aside {
-  background: aliceblue;
+  /* background: aliceblue; */
   width: 90%;
   margin: auto;
   padding: 1em;
@@ -121,4 +121,52 @@ ul li::marker {
   font-size: 150%;
   color: #517e94;
   opacity: 0;
+}
+
+/*Mine */
+
+li{
+  list-style: none;
+  align-items: center;
+}
+
+#dropdown{
+  display: flex;
+  justify-content: center;
+  
+}
+
+select{
+  width: 400px;
+  height: 24px;
+}
+
+.center{
+  text-align: center;
+}
+
+.bigger{
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  font-size: 80px;
+  margin-top: 1px;
+}
+
+.movies-header{
+  margin-bottom: 1px;
+}
+
+.movie-details{
+  padding: 10px 30px 20px 30px;
+  margin-top: 20px;
+  background-color: #f0f8ff;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.middle{
+  text-align: center;
 }
