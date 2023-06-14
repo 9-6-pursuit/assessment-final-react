@@ -23,13 +23,18 @@ function Movies(){
         let selectedMovie = movies.find(movie =>{
             return movie.title === title
         })
-        setSelected(selectedMovie)
+        if(title === 'empty'){
+            setSelected(null)
+        } else{
+            setSelected(selectedMovie)
+        }
     }
     return(
         <div className='movies'>
-            <h1 class='center movies-header'>The Movies</h1>
-            <div id='dropdown'>
+            <h1 class='center page-header'>Select a Movie</h1>
+            <div class = "search">
                 <select onChange={handleOnChange}>
+                    <option className='middle'>empty</option>
                     {movies.map((movie)=>{
                         return(
                             <option className='middle' key={movie.id}>{movie.title}</option>

@@ -37,10 +37,12 @@ function Locations() {
       
   return (
     <div className='locations'>
-        <h1 class='center'>List of Locations</h1>
+        <h1 class='center page-header'>List of Locations</h1>
+        <div class="search">
+
         <button onClick={toggleThatButton}>
         {dahButton ? 'Hide Locations' : 'Show Locations'}
-        Locations</button>
+        </button>
         {dahButton ? (
           <button onClick={()=> sortPlaces("name")}>Sort by Name</button>):null}
         
@@ -50,6 +52,7 @@ function Locations() {
         {dahButton ?(
           <button onClick={()=>sortPlaces("terrain")}>Sort by Terrain</button>):null} 
 
+        </div>
     
         <ul style = {{display: dahButton? "flex":"none"}}>
           {places.map((place, index) => (

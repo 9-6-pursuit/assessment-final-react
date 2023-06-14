@@ -39,21 +39,23 @@ function People() {
     }
   return (
     <div className='people'>
-        <h1 class='center'>Search for a Person</h1>
+        <h1 class='center page-header'>Search for a Person</h1>
         <form onSubmit={handleFormSubmit}>
+        <div class="search">
         <input type='text' id='search' onChange={handleTextChange} />
         <button type='submit' onClick={handleClick}>
           submit
         </button>
+        </div>
         {selectedPeoples ? (
-          <div>
-            <h3>Name: {selectedPeoples.name}</h3>
-            <p><strong>Age:</strong> {selectedPeoples.age}</p>
-            <p><strong>Gender:</strong> {selectedPeoples.gender}</p>
-            <p><strong>Hair color:</strong> {selectedPeoples.hair_color}</p>
+          <div className='people-details'>
+            <h3 class='center'>Name: {selectedPeoples.name}</h3>
+            <p class='center'><strong>Age:</strong> {selectedPeoples.age}</p>
+            <p class='center'><strong>Gender:</strong> {selectedPeoples.gender}</p>
+            <p class='center'><strong>Hair color:</strong> {selectedPeoples.hair_color}</p>
           </div>
         ): (
-            <p>Not Found</p>
+            <p class = 'center'>Not Found</p>
         )}
         
       </form>

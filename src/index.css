@@ -106,13 +106,15 @@ li {
 
 .movies {
   padding-top: 1em;
+  /* padding-left: 2em; */
   height: 80vh;
   background: #d7f0f2;
+
 }
 
 .movies aside {
   /* background: aliceblue; */
-  width: 90%;
+  width: 80%;
   margin: auto;
   padding: 1em;
 }
@@ -128,12 +130,6 @@ ul li::marker {
 li{
   list-style: none;
   align-items: center;
-}
-
-#dropdown{
-  display: flex;
-  justify-content: center;
-  
 }
 
 select{
@@ -155,7 +151,7 @@ h1{
   margin-top: 1px;
 }
 
-.movies-header{
+.page-header{
   margin-bottom: 1px;
 }
 
@@ -169,4 +165,17 @@ h1{
 
 .middle{
   text-align: center;
+}
+
+.people-details{
+  padding: 10px 60px 60px 60px;
+  margin-top: 20px;
+  background-color: #f8f9ff;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
 }

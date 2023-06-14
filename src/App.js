@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Movies from "./components/Movies";
 import People from "./components/People";
 import Locations from "./components/Locations"
+import Button from 'react-bootstrap/Button';
 
 
 
