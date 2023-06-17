@@ -41,6 +41,7 @@ li {
   background: ghostwhite;
   padding: 1em;
   min-height: 80vh;
+  margin: 20px 40px 20px 40px;
 }
 
 .locations > ul {
@@ -93,6 +94,7 @@ li {
   height: 80vh;
   padding-top: 1em;
   text-align: center;
+  margin: 20px 40px 20px 40px;
 }
 
 .people aside {
@@ -117,6 +119,7 @@ li {
   height: 80vh;
   background: #d7f0f2;
   text-align: center;
+  margin: 20px 40px 20px 40px;
 }
 
 .movies aside {
