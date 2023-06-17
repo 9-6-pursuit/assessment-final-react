@@ -1,51 +1,79 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+// import "./People.css";
 
 function People() {
-    const [people, setPeople] = useState([])
-    const [person, setPerson] = useState(null)
-    const [message, setMessage] = useState(null)
+  const [searchText, setSearchText] = useState("");
+  const [people, setPeople] = useState([]);
+  const [personInfo, setPersonInfo] = useState(null);
+  const [personNotFound, setPersonNotFound] = useState(false);
 
-    useEffect(() => {
-        fetch(`https://resource-ghibli-api.onrender.com/people`)
-        .then(response => response.json())
-        .then(people => {
-            setPeople(people)
-        })
-        .catch(message => {
-            console.error(message)
-        })
-    }, [])
+  const handleInputChange = (event) => {
+    setSearchText(event.target.value);
+  };
 
-    function handleSearchChange(event) {
-        event.preventDefault()
-        let typed = event.target.people.value;
-        let selectedPerson = people.find(person => {
-            let lower = person.name.toLowerCase()
-            return lower === typed.toLowerCase()
-        })
-        setPerson(selectedPerson)
-        setMessage("Not Found")
-        event.target.people.value = ''
+  const handleSearch = (event) => {
+    event.preventDefault();
+
+    const person = people.find(
+      (person) => person.name.toLowerCase() === searchText.toLowerCase()
+    );
+    if (person) {
+      setPersonInfo({
+        name: person.name,
+        age: person.age,
+        hairColor: person.hair_color,
+        eyeColor: person.eye_color,
+      });
+      setPersonNotFound(false);
+    } else {
+      setPersonInfo(null);
+      setPersonNotFound(true);
     }
+    setSearchText("");
+  };
 
-    return (
-        <div className="people text-center">
-            <h3>Search for a person</h3>
-            <form onSubmit={handleSearchChange} className="input-group mb-3">
-                <input id="people"type="text" className="form-control" placeholder="Studio Ghibil Search" aria-label="Studio Ghibil Search" aria-describedby="button-addon2"/>
-                <button className="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
-            </form>
-            {person ? (
-                <div>
-                    <h1><strong>Name: </strong>{person.name}</h1>
-                    <h3><strong>Age: </strong>{person.age}</h3>
-                    <h3><strong>Eye Color: </strong>{person.eye_color}</h3>
-                    <h3><strong>Hair Color: </strong>{person.hair_color}</h3>
-                </div>
-            ) : <h1>{message}</h1>}
-        </div>
-  )
-  }
-  
-  export default People;
-  
+  useEffect(() => {
+    fetchPeople();
+  }, []);
+
+  const fetchPeople = () => {
+    fetch("https://resource-ghibli-api.onrender.com/people")
+      .then((response) => response.json())
+      .then((data) => {
+        setPeople(data);
+        console.log(data);
+      })
+      .catch((error) => console.log("Error fetching people:", error));
+  };
+
+  return (
+    <div>
+      <div className="people">
+        <h1>
+          Search for a Person
+        </h1>
+        <form onSubmit={handleSearch}>
+          <input type="text" value={searchText} onChange={handleInputChange} />
+          <button type="submit">SUBMIT</button>
+        </form>
+        {personNotFound && <p>Not Found</p>}
+        {personInfo && (
+          <aside>
+            <h1>Name: {personInfo.name}</h1>
+            <p>
+              <strong>Age:</strong> {personInfo.age}
+            </p>
+            <p>
+              <strong>Hair Color:</strong> {personInfo.hairColor}
+            </p>
+            <p>
+              <strong>Eye Color:</strong> {personInfo.eyeColor}
+            </p>
+          </aside>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default People;

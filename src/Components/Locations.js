@@ -1,81 +1,109 @@
-import { useEffect, useState } from "react";
-import "./locations.css"
+import React, { useState, useEffect } from "react";
+
 function Locations() {
-    const [locations, setLocations] = useState([])
-    const [shown, setShown] = useState(false)
+  const [locations, setLocations] = useState([]);
+  const [showLocations, setShowLocations] = useState(false);
+  const [sortOrder, setSortOrder] = useState("default");
 
-    useEffect(() => {
-        fetch(`https://resource-ghibli-api.onrender.com/locations`)
-        .then(response => response.json())
-        .then(locations => {
-            setLocations(locations)
-        })
-        .catch(message => {
-            console.error(message)
-        })
-    }, [])
+  const handleToggleLocations = () => {
+    setShowLocations(!showLocations);
+  };
 
-    function handleLocations() {
-        if(shown === false ){
-            setShown(true)
-        } else {
-            setShown(false)
-        }
-    }
-    function sortClimate(){
-        let sorted = [...locations].sort((a, b) => {
-            let fa = a.climate.toLowerCase(),
-            fb = b.climate.toLowerCase();
-    
-        if (fa < fb) {
-            return -1;
-        }
-        if (fa > fb) {
-            return 1;
-        }
-        return 0;
-        })
-        setLocations(sorted)
-        console.log(locations)
-    }
-    function sortTerrain(){
-        let sorted = [...locations].sort((a, b) => {
-            let fa = a.terrain.toLowerCase(),
-            fb = b.terrain.toLowerCase();
-    
-        if (fa < fb) {
-            return -1;
-        }
-        if (fa > fb) {
-            return 1;
-        }
-        return 0;
-        })
-        setLocations(sorted)
-        console.log(locations)
-    }
-    return (
-        <div className="locations text-center">
-            <h1>List of Locations</h1>
-            <button onClick={handleLocations} type="submit" className="btn btn-primary btn-lg search">{shown ? "Hide Locations" : "Show Locations"}</button>
-            {shown ? <button onClick={sortClimate} type="submit" className="btn btn-primary btn-lg search"> Sort by Climate</button> : null}
-            {shown ? <button onClick={sortTerrain} type="submit" className="btn btn-primary btn-lg search"> Sort by Terrain</button> : null}
-            <div className="container">
-                <div className="row justify-content-md-center">
-                    {shown ? locations.map(location => {
-                        return (
-                            <div key={location.id}className="col-3 card"> 
-                                <p className="lineItem"><strong>Name: </strong>{location.name}</p>
-                                <p className="lineItem"><strong>Climate: </strong>{location.climate}</p>
-                                <p className="lineItem"><strong>Terrain: </strong>{location.terrain}</p>
-                            </div>
-                        )
-                    }) : null}
-                </div>
-            </div>
+  useEffect(() => {
+    fetchLocations();
+  }, []);
+
+  const fetchLocations = () => {
+    fetch("https://resource-ghibli-api.onrender.com/locations")
+      .then((response) => response.json())
+      .then((data) => {
+        setLocations(data);
+        console.log(data);
+      })
+      .catch((error) => console.log("Error fetching people:", error));
+  };
+
+  const handleSortByName = () => {
+    const sortedLocations = [...locations].sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
+    setLocations(sortedLocations);
+    setSortOrder("name");
+  };
+
+  const handleSortByClimate = () => {
+    const sortedLocations = [...locations].sort((a, b) =>
+      a.climate.localeCompare(b.climate)
+    );
+    setLocations(sortedLocations);
+    setSortOrder("climate");
+  };
+
+  const handleSortByTerrain = () => {
+    const sortedLocations = [...locations].sort((a, b) =>
+      a.terrain.localeCompare(b.terrain)
+    );
+    setLocations(sortedLocations);
+    setSortOrder("terrain");
+  };
+
+  return (
+    <div className="locations">
+      <h1 className="location-title" style={{ textAlign: "center" }}>
+        List of Locations
+      </h1>
+      <button type="button" onClick={handleToggleLocations}>
+        {showLocations ? "Hide Locations" : "Show Locations"}
+      </button>
+      {showLocations && (
+        <div>
+          <div className="sort-buttons">
+            <button
+              type="button"
+              onClick={handleSortByName}
+              disabled={sortOrder === "name"}
+            >
+              Sort by Name
+            </button>
+            <button
+              type="button"
+              onClick={handleSortByClimate}
+              disabled={sortOrder === "climate"}
+            >
+              Sort by Climate
+            </button>
+            <button
+              type="button"
+              onClick={handleSortByTerrain}
+              disabled={sortOrder === "terrain"}
+            >
+              Sort by Terrain
+            </button>
+          </div>
+          <ul>
+            {locations.map((location) => (
+              <li key={location.id}>
+                <ul className="details">
+                  <li>
+                    <strong>Name:</strong>
+                    <span className="location-name">{location.name}</span>
+                  </li>
+                  <li>
+                    <strong>Climate:</strong>
+                    <span className="location-climate">{location.climate}</span>
+                  </li>
+                  <li>
+                    <strong>Terrain:</strong>
+                    <span className="location-terrain">{location.terrain}</span>
+                  </li>
+                </ul>
+              </li>
+            ))}
+          </ul>
         </div>
-  )
-  }
-  
-  export default Locations;
-  
+      )}
+    </div>
+  );
+}
+
+export default Locations;

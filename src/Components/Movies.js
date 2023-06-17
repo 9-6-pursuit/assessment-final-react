@@ -1,49 +1,58 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
+
+// import "./Movies.css";
 
 function Movies() {
-    const [movies, setMovies] = useState([])
-    const [selected, setSelected] = useState(null)
+  const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState("");
 
-    useEffect(() => {
-        fetch(`https://resource-ghibli-api.onrender.com/films`)
-        .then(response => response.json())
-        .then(movies => {
-            setMovies(movies)
-        })
-        .catch(message => {
-            console.error(message)
-        })
-    }, [])
+  const handleSelectChange = (event) => {
+    setSelectedMovie(event.target.value);
+  };
 
-    let handleOnChange = (event) => {
-        let title = event.target.value
-        let selectedMovie = movies.find(movie => {
-            return movie.title === title
-        })
-        setSelected(selectedMovie)
-    }
+  useEffect(() => {
+    fetchMovies();
+  }, []);
 
-    return (
-        <div className="movies text-center">
-            <h3>Studio Ghibil Movies</h3>
-            <select onChange={handleOnChange}>
-                <option></option>
-                {movies.map((movie) => {
-                    return (
-                        <option key={movie.id}>{movie.title}</option>
-                    )
-                })}
-            </select>
-            {selected ? (
-                <div>
-                    <h1><strong>Title: </strong>{selected.title}</h1>
-                    <h3><strong>Release Date: </strong>{selected.release_date}</h3>
-                    <h3><strong>Desctiption: </strong>{selected.description}</h3>
-                </div>
-            ) : null}
+  const fetchMovies = () => {
+    fetch("https://resource-ghibli-api.onrender.com/films")
+      .then((response) => response.json())
+      .then((data) => {
+        setMovies(data);
+        console.log(data);
+      })
+      .catch((error) => console.log("Error fetching movies:", error));
+  };
+  const selectedMovieData = movies.find((movie) => movie.id === selectedMovie);
+
+  return (
+    <div className="movies">
+      <h1 className="title">Select a Movie</h1>
+      <select value={selectedMovie} onChange={handleSelectChange}>
+        <option value=""> </option>
+        {movies.map((movie) => (
+          <option key={movie.id} value={movie.id}>
+            {movie.title}
+          </option>
+        ))}
+      </select>
+
+      {selectedMovieData && (
+        <div className="movie-details">
+          <aside>
+            <h2>Title: {selectedMovieData.title}</h2>
+            <p>
+              <strong>Release Date:</strong> {selectedMovieData.release_date}
+            </p>
+            <p>
+              <strong>Description:</strong> {selectedMovieData.description}
+            </p>
+          </aside>
         </div>
-  )
-  }
-  
-  export default Movies;
-  
+      )}
+    </div>
+  );
+}
+
+export default Movies;
