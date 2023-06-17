@@ -41,8 +41,8 @@ function Movies() {
       {selectedMovieData && (
         <div className="movie-details">
           <aside>
-            <h2>Title: {selectedMovieData.title}</h2>
-            <p>
+            <h2><strong>Title:</strong> {selectedMovieData.title}</h2>
+            <p style={{paddingTop: 15}}>
               <strong>Release Date:</strong> {selectedMovieData.release_date}
             </p>
             <p>
