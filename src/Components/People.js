@@ -56,7 +56,7 @@ function People() {
           <input type="text" value={searchText} onChange={handleInputChange} />
           <button type="submit">SUBMIT</button>
         </form>
-        {personNotFound && <p>Not Found</p>}
+        {personNotFound && <p style={{paddingTop: 30}}>Not Found</p>}
         {personInfo && (
           <aside>
             <h1>Name: {personInfo.name}</h1>
