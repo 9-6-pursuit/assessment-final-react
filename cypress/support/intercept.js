@@ -1,6 +1,6 @@
 export default function () {
   return cy
-    .intercept("GET", "https://resource-ghibli-api-pursuit.onrender.com/**", (req) => {
+    .intercept("GET", "https://resource-ghibli-api.onrender.com/**", (req) => {
       if (req.url.includes("locations")) {
         return req.reply({
           statusCode: 200,
