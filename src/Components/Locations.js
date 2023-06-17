@@ -82,22 +82,16 @@ function Locations() {
           </div>
           <ul>
             {locations.map((location) => (
-              <li key={location.id}>
-                <ul className="details">
-                  <li>
-                    <strong>Name:</strong>
-                    <span className="location-name">{location.name}</span>
-                  </li>
-                  <li>
-                    <strong>Climate:</strong>
-                    <span className="location-climate">{location.climate}</span>
-                  </li>
-                  <li>
-                    <strong>Terrain:</strong>
-                    <span className="location-terrain">{location.terrain}</span>
-                  </li>
-                </ul>
-              </li>
+              <ul key={location.id} className="details">
+                <li>
+                  <strong>Name:</strong>
+                  <span className="location-name">{location.name}</span>
+                  <strong>Climate:</strong>
+                  <span className="location-climate">{location.climate}</span>
+                  <strong>Terrain:</strong>
+                  <span className="location-terrain">{location.terrain}</span>
+                </li>
+              </ul>
             ))}
           </ul>
         </div>

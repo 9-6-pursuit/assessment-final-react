@@ -153,7 +153,7 @@ describe("has a functioning Locations page", () => {
   it("shows all locations and additional information when the Show Locations button is clicked", () => {
     cy.get("button").first().contains("Show Locations").click();
 
-    cy.get(".locations > ul > li").should("have.length", 24);
+    cy.get(".locations ul > li").should("have.length", 24);
     cy.get(".locations ul ul li").contains("Irontown");
     cy.get(".locations ul ul li").contains("The Marsh House");
     cy.get(".locations ul ul li").contains("Pazu's Mines");
@@ -210,7 +210,7 @@ describe("Has 3 buttons that allow sorting by location Name, Climate or Terrain"
       cy.get(".locations ul ul")
         .eq(index)
         .within(() => {
-          cy.get("span").eq(1).should("have.text", locations[index].name);
+          cy.get("span").eq(0).should("have.text", locations[index].name);
         });
     });
   });
@@ -232,7 +232,7 @@ describe("Has 3 buttons that allow sorting by location Name, Climate or Terrain"
         .eq(index)
         .within(() => {
           cy.get("li")
-            .eq(1)
+            .eq(0)
             .within(() => {
               cy.get("span")
                 .eq(1)
