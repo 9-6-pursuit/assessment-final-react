@@ -6,7 +6,7 @@ function NavBar() {
     <nav className="navbar">
       <Link to="/" className="nav-logo">
         <img
-          src="https://files.cults3d.com/uploaders/14307074/illustration-file/3c12b15c-003f-409f-a9b6-b0dcde4495d8/render0001.png"
+          src="https://tomplay.com//storage/section-pages/January2022/r0RKvvxgcQpUl0UHAOOJ.png"
           alt="Ghibli-Logo"
         />
       </Link>
