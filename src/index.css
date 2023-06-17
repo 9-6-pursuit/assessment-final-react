@@ -105,8 +105,8 @@ li {
   margin-top: 20px;
 }
 
-.people aside h3 {
-  padding-top: 1em;
+.people aside h1 {
+  padding-top: 20px;
 }
 
 .people span,
@@ -131,7 +131,7 @@ li {
 }
 
 .movies > select {
-  width: 300px;
+  width: 250px;
   height: 40px;
   font-size: 16px;
 }
