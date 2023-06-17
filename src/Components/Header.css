@@ -1,0 +1,34 @@
+/* Apply CSS reset to remove default margins and padding */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure the NavBar takes up the full width */
+.navbar {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #507e94;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #00C8FF;
+}
